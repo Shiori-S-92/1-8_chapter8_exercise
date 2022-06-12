@@ -7,7 +7,7 @@
 
 main {
   width: 960px;
-  padding: 50px auto;
+  padding: 50px 0;
 }
 
 .item-list {
@@ -25,4 +25,26 @@ main {
 .box-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.box {
+  background-color: #ffd700;
+  width: 30%;
+  height: 200px;
+  margin-right: 5%;
+  margin-bottom: 40px;
+}
+
+.box:first-child,
+.box:nth-child(5),
+.box:last-child {
+  background-color: #ff8c00;
+}
+
+.box:nth-child(3n) { /* 兄弟要素の中で 3つ おきに要素を選択 */
+  margin-right: 0;
+}
+
+.box:nth-last-child(-n + 3) { /* 兄弟要素のグループの中で最後の3つの要素を表します。 */
+  margin-bottom: 0;
 }
